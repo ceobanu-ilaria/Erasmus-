@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<title>galerie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 style="text-align:center;font-family:Arial,Georgia;color:rgb(95,95,95);font-size:30px;" class="w3-center">Galerie Gradina Zoologica</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1257/large_foto-articol-1257.jpg"  style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1258/large_foto-articol-1258.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1255/large_foto-articol-1255.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1254/large_foto-articol-1254.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1256/large_foto-articol-1256.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1259/large_foto-articol-1259.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1260/large_foto-articol-1260.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1261/large_foto-articol-1261.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1263/large_foto-articol-1263.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1264/large_foto-articol-1264.jpg"style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1265/large_foto-articol-1265.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1266/large_foto-articol-1266.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1268/large_foto-articol-1268.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1267/large_foto-articol-1267.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1262/large_foto-articol-1262.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1269/large_foto-articol-1269.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1280/large_foto-articol-1280.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1279/large_foto-articol-1279.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1278/large_foto-articol-1278.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1275/large_foto-articol-1275.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1277/large_foto-articol-1277.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1276/large_foto-articol-1276.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1270/large_foto-articol-1270.jpg" rel="prettyPhoto[]" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1274/large_foto-articol-1274.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1271/large_foto-articol-1271.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1273/large_foto-articol-1273.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ghiduri-turistice.info/data_files/galerie-foto-articol/1272/large_foto-articol-1272.jpg" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+<body background-color:black;</body>
+	{
+	font-family:Arial,Georgia;
+	background-color:black;
+	color:white;
+        	 }
+#container
+	{
+	width:100%;
+	margin: 0 auto;
+	}
+#antet
+	{height:25px;
+	background-color:white;
+	color:rgb(83,83,83);
+	padding:20px;
+	text-decoration:none ;
+	}
+#continut
+	{width:100%;
+	background-color:white;
+	height:475px;
+	}
+
+ul {	
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+li {color: rgb(95,95,95);
+    float: right;
+	display: block;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+	color: rgb(95,95,95);
+}
+li a:visited {
+    color: rgb(95,95,95);
+    background-color: transparent;
+    text-decoration: none;
+}
+li a:hover {
+	background-color:grey;
+	color: white;
+	text-decoration:none;
+}
+		a:link {
+   		 color:rgb(95,95,95);
+  		  background-color: transparent;
+  		  text-decoration: none;
+		}
+		a:visited {
+   		 color:rgb(95,95,95);
+  		  background-color: transparent;
+  		  text-decoration: none;
+		}
+		a:hover {
+ 		   color: grey;
+  		  background-color: transparent;
+  		  text-decoration: none;
+		}
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: grey;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<hr>
+	<div id="antet">
+		<ul><a href="galerieprim.html" target="_continut"title="Click pentru acasa"><b style="text-align:left; font-size:220%;font-style: italic;text-decoration:none;color:rgb(95,95,95);" > GRADINA ZOOLOGICA </b></a>
+			<li class="submeniu"><a href="contact.html" target="_continut" >Contact ZOO</a>
+			</li>
+			<li class="submeniu"><a href="login.html"target="_continut">Login ZOO</a>
+			</li>
+			<li class="submeniu"><a href="galerie.html"target="_continut">Galerie ZOO</a>
+			</li>
+			<li class="submeniu"><a href="bilete.html" target="_continut">Bilete ZOO</a>
+			</li>
+			
+			<li class="dropdown">
+	 <a href="javascript:void(0)" class="dropbtn">Program ZOO</a>
+	 <div class="dropdown-content">
+    <a hclass="submeniu"><a href="programdeiarna.html" target="_continut"title="Vezi programul in functie de sezon"ref="programdeiarna.html">Program de iarna</a>
+     <a class="submeniu"><a href="programdevara.html" target="_continut"title="Vezi programul in functie de sezon"href="programdevara.html">Program de vara</a>
+</div></li>
+
+		</ul></p>
+		 
+	</div>
+<hr>
+	<div id="continut">
+<iframe src="galerieprim.html" width="100%" height="479px"style="border:none;text-decoration:none" name="_continut"></iframe>
+	</div>		
+	</div>
+	
+</div>
+
+
+</body>
+<hr style="background-color:silver;">
+<marquee><img src="logo.png" style="width:150px; height:100px;"></marquee> 
+<p align="center"><b style="color:rgb(95,95,95);"> - Copyright Ceobanu Ilaria -<br>Contact number: 0755399978</b></p><br>
+<body onLoad="goforit()">
+
+<script>
+
+var dayarray=new Array("Duminica","Luni","Marti","Miercuri","Joi","Vineri","Sambata")
+var montharray=new Array("Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie")
+
+function getthedate(){
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var hours=mydate.getHours()
+var minutes=mydate.getMinutes()
+var seconds=mydate.getSeconds()
+var dn="AM"
+if (hours>=24)
+dn="PM"
+if (hours>24){
+hours=hours-24
+}
+if (hours==0)
+hours=24
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+//change font size here
+var cdate="<small><font color='666666' face='Trebuchet MS' size='2'><b>"+dayarray[day]+","+daym+" "+montharray[month]+"- "+year+" "+hours+":"+minutes+":"+seconds+" "+dn
++"</b></font></small>"
+if (document.all)
+document.all.clock.innerHTML=cdate
+else if (document.getElementById)
+document.getElementById("clock").innerHTML=cdate
+else
+document.write(cdate)
+}
+if (!document.all&&!document.getElementById)
+getthedate()
+function goforit(){
+if (document.all||document.getElementById)
+setInterval("getthedate()",1000)
+}
+
+</script>
+<span id="clock"></span>
+</html>
